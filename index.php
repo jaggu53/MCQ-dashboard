@@ -19,7 +19,7 @@
         </ul>
         <div class="tab-content">
           <div id="login" class="tab-pane fade in active">
-            <form style="margin-top:10px;">
+            <form style="margin-top:10px;" method="post" action="login.php">
               <input type="text" class="input" placeholder="User ID"/><br />
               <input type="password" class="input" placeholder="Password"/><br />
               <a href="#" style="text-align:right;display:block;font-size:12px;">Forgot&nbsp;password?</a><br />
@@ -29,7 +29,7 @@
             </form>
           </div>
           <div id="signup" class="tab-pane fade">
-            <form style="margin-top:10px;">
+            <form style="margin-top:10px;" method="post" action="register.php">
               <input type="text" class="input" placeholder="Name"/><br />
               <input type="text" class="input" placeholder="User ID"/><br />
               <input type="email" class="input" placeholder="Email Address"/><br />

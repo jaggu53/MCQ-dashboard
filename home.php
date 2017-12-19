@@ -8,9 +8,8 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body>
-  <!--header-->
-  <div class="container-fluid">
+<body style="background-color:#333333">
+  <div>
     <nav class="navbar navbar-inverse">
     <div class="container-fluid">
       <div class="navbar-header">
@@ -18,12 +17,11 @@
       </div>
 
       <ul class="nav navbar-nav navbar-right">
-        <li><button id="sb" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#">View Stats</button></li>
+        <li><button id="sb" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#">View&nbsp;Stats</button></li>
         <li><button id="sb" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#">Logout</button></li>
       </ul>
     </div>
   </nav>
-  </div>
 
 <!--header-->
 
