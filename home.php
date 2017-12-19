@@ -24,62 +24,84 @@
   </nav>
 
 <!--header-->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2"></div>
 
-<!--DROPDOWN-->
-<button type="button" class="btn btn-info">Add Question</button>
-<button type="button" class="btn btn-info btn-lg dropdown-toggle" data-toggle="collapse" data-target="#form1">
-    <span class="caret"></span>
-  </button>
-  <!--ADD QUESTIONS-->
-  <div id="form1" class="collapse">
+    
+    <div class="col-md-8">
+      <p>
+        <!--Question added successfully -->
+      </p>
+      <h3 class="text">Add&nbsp;Question&nbsp;<button id="arrow" type="button" class="btn btn-info btn-lg dropdown-toggle" data-toggle="collapse" data-target="#form1">
+          <span class="caret"></span>
+        </button>
+      </h3>
 
-      <div id="login" class="tab-pane fade in active">
-        <form style="margin-top:10px;">
-          <div id="category">
-            Select category
+        <!--ADD QUESTIONS-->
+        <div id="form1" class="collapse">
 
-		<select name="players">
-			<option value="1" selected>1</option>
-			<option value="2">2</option>
-			<option value="3">3</option>
-			<option value="4">4</option>
-			<option value="5">5</option>
-			<option value="6">6</option>
-			<option value="7">7</option>
-			<option value="8">8</option>
-			<option value="9">9</option>
-			<option value="10">10</option>
-		</select>
-  </div>
-  <br />
-          <input type="text"  class="form-control" id="inputdefault" placeholder="Enter question"/><br />
-          <br />
-          <input type="text"  class="form-control" id="inputdefault" placeholder="Option 1"/><br />
-          <input type="text"  class="form-control" id="inputdefault" placeholder="Option 2"/><br />
-          <input type="text"  class="form-control" id="inputdefault" placeholder="Option 3"/><br />
-          <input type="text"  class="form-control" id="inputdefault" placeholder="Option 4"/><br />
+            <div id="login" class="tab-pane fade in active">
+              <form style="margin-top:10px;">
+                <div id="category">
+                  <p class="text">Select&nbsp;category&nbsp;
 
-          <div id="category">
-            Correct option
+      		<select name="players" style="background-color:#333333">
+      			<option value="1" selected>1</option>
+      			<option value="2">2</option>
+      			<option value="3">3</option>
+      			<option value="4">4</option>
+      			<option value="5">5</option>
+      			<option value="6">6</option>
+      			<option value="7">7</option>
+      			<option value="8">8</option>
+      			<option value="9">9</option>
+      			<option value="10">10</option>
+      		</select></p>
+        </div>
+        <br />
+                <input type="text"  class="form-control" id="inputdefault" placeholder="Enter question"/><br />
+                <br />
+                <input type="text"  class="form-control" id="inputdefault" placeholder="Option 1"/><br />
+                <input type="text"  class="form-control" id="inputdefault" placeholder="Option 2"/><br />
+                <input type="text"  class="form-control" id="inputdefault" placeholder="Option 3"/><br />
+                <input type="text"  class="form-control" id="inputdefault" placeholder="Option 4"/><br />
 
-		<select name="players">
-			<option value="1" selected>1</option>
-			<option value="2">2</option>
-			<option value="3">3</option>
-			<option value="4">4</option>
-		</select>
-  </div>
-  <br />
+                <div id="category"><p class="text">
+                  Correct&nbsp;option
 
-          <button type="button" class="btn btn-primary btn-block">Upload</button><br />
-        </form>
-      </div>
+      		<select name="players" style="background-color:#333333">
+      			<option value="1" selected>1</option>
+      			<option value="2">2</option>
+      			<option value="3">3</option>
+      			<option value="4">4</option>
+      		</select></p>
+        </div>
+        <br />
+
+                <button type="button" class="btn btn-primary btn-block">Upload</button><br />
+              </form>
+            </div>
+          </div>
+      <!--ADD QUESTIONS-->
+      <!--DROPDOWN-->
+
+      <br /><br />
+      <h3 class="text">upload&nbsp;via&nbsp;doc&nbsp;&nbsp;
+          <button type="button" class="btn btn-info">upload</button>
+      </h3>
+
+
     </div>
-<!--ADD QUESTIONS-->
+
+
+    <div class="col-md-2"></div>
+  </div>
+</div>
 <!--DROPDOWN-->
 
-<br /><br />
-<button type="button" class="btn btn-info">upload via doc</button>
+  </div>
+  <!--header-->
 
 
 
