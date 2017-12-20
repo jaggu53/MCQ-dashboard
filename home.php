@@ -28,7 +28,7 @@
   <div class="row">
     <div class="col-md-2"></div>
 
-    
+
     <div class="col-md-8">
       <p>
         <!--Question added successfully -->
@@ -41,7 +41,7 @@
         <!--ADD QUESTIONS-->
         <div id="form1" class="collapse">
 
-            <div id="login" class="tab-pane fade in active">
+            <div class="tab-pane fade in active">
               <form style="margin-top:10px;">
                 <div id="category">
                   <p class="text">Select&nbsp;category&nbsp;
