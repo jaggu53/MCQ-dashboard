@@ -5,12 +5,13 @@ body{
   margin-top: 15%;
   padding: 0% 5% 0% 5%;
 }
-#sb{
+.btn{
   background-color: #1a1a1a;
   color: white;
-  float: right;
 }
-
+.msg{
+  color: red;
+}
 #form1{
   margin: 2% 15% 0% 15%;
 }
@@ -49,4 +50,7 @@ body{
 .text{
   color: #fff;
   text-decoration-style: solid;
+}
+.btn{
+
 }

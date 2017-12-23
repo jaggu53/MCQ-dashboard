@@ -1,6 +1,8 @@
+
 <?php
-require 'db.php';
-session_start();
+  require 'db.php';
+  session_start();
+  $_SESSION['login']=false;
 ?>
 <!DOCTYPE html>
 <html>
@@ -11,6 +13,16 @@ session_start();
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link rel="stylesheet" type="text/css" href="style.css">
+
+  <script type = "text/javascript" >
+
+     function preventBack(){window.history.forward();}
+
+      setTimeout("preventBack()", 0);
+
+      window.onunload=function(){null};
+
+  </script>
 </head>
 
 <body>
@@ -26,10 +38,25 @@ session_start();
           <div id="login" class="tab-pane fade in active">
             <form action="login.php" method="post" style="margin-top:10px;">
               <input type="text" class="input" placeholder="User ID" name="uid"/><br />
+              <p class="msg">
+                <?php
+                if( isset($_SESSION['usernotfoundmsg']) AND !empty($_SESSION['usernotfoundmsg']) )
+                  {  echo $_SESSION['usernotfoundmsg'];}
+                ?>
+              </p>
               <input type="password" class="input" placeholder="Password" name="password"/><br />
+              <p class="msg">
+                <?php
+                if( isset($_SESSION['wrongpwmsg']) AND !empty($_SESSION['wrongpwmsg']) )
+                  {  echo $_SESSION['wrongpwmsg'];}
+                ?>
+              </p>
               <a href="#" style="text-align:right;display:block;font-size:12px;">Forgot&nbsp;password?</a><br />
               <div style="text-align:center;">
                 <button class="button" name="login">Login</button><br />
+                <p class='msg'>
+                  <?php echo $_SESSION['login']; ?>
+                </p>
               </div>
             </form>
           </div>
@@ -41,8 +68,15 @@ session_start();
               <input type="password" class="input" placeholder="Password" name="password"/><br />
               <input type="password" class="input" placeholder="Confirm Password" name="password2"/><br />
               <input type="number" class="input" placeholder="Phone number" name="phone"/><br />
+              <p class="msg">
+                <?php
+                if( isset($_SESSION['userexistsmsg']) AND !empty($_SESSION['userexistsmsg']) )
+                  {  echo $_SESSION['userexistsmsg'];}
+                ?>
+              </p>
               <div style="text-align:center;">
                 <button class="button" name="register">Sign Up</button><br />
+
               </div>
             </form>
           </div>

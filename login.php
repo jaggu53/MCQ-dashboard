@@ -8,9 +8,8 @@
 
   if($result->num_rows == 0)
   {
-    $_SESSION['usernotfoundmsg'] = "User with that email doesn't exist!";
-    echo "error1";
-    header("refresh:5;url=index.php");
+    $_SESSION['usernotfoundmsg'] = "User with that user id doesn't exist!";
+    header("location:index.php");
   }
   else{
     $user=$result->fetch_assoc();
@@ -20,14 +19,14 @@
       $_SESSION['uid']=$user['user_id'];
       $_SESSION['active']=$user['active'];
       $_SESSION['login']= true;
-
+      $_SESSION['usernotfoundmsg'] = "";
+      $_SESSION['wrongpwmsg']="";
       header("location:home.php");
 
     }
     else
     {
       $_SESSION['wrongpwmsg']="You have entered wrong password, try again!";
-      echo "error2";
       header("refresh:5;url=index.php");
     }
   }

@@ -16,7 +16,7 @@
 
   if($result->num_rows > 0)
   {
-    $_SESSION['userexistsmsg']='User with this email already exists!';
+    $_SESSION['userexistsmsg']='User with this user id already exists!';
     header('location:index.php');
   }
   else

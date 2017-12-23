@@ -1,4 +1,11 @@
-
+<?php
+require 'db.php';
+session_start();
+ if(!$_SESSION['login'])
+  {
+    header('location:index.php');
+  }
+ ?>
 <html>
 <head>
   <meta charset="utf-8">
@@ -13,12 +20,18 @@
     <nav class="navbar navbar-inverse">
     <div class="container-fluid">
       <div class="navbar-header">
-        <a class="navbar-brand" href="#"><b>MCQ-DASHBOARD</b></a>
+        <a class="navbar-brand" href="home.php"><b>MCQ-DASHBOARD</b></a>
       </div>
 
       <ul class="nav navbar-nav navbar-right">
-        <li><button id="sb" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#">View&nbsp;Stats</button></li>
-        <li><button id="sb" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#">Logout</button></li>
+        <li><button type="button" class="btn btn-primary btn-lg" href="#">View&nbsp;Stats</button></li>&nbsp;&nbsp;
+        <li> <div class="dropdown">
+  <button class="btn btn-primary dropdown-toggle btn-lg" type="button" data-toggle="dropdown"><?php echo $_SESSION['uid']; ?>
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="logout.php">Logout</a></li>
+  </ul>
+</div> </li>
       </ul>
     </div>
   </nav>
@@ -102,10 +115,5 @@
 
   </div>
   <!--header-->
-
-
-
-
-
 </body>
 </html>
