@@ -1,8 +1,17 @@
-
 <?php
   require 'db.php';
   session_start();
-  $_SESSION['login']=false;
+  if(!isset($_SESSION['uid'])){
+    $_SESSION['login']=false;
+  }
+  else
+  {
+    $_SESSION['login']=true;
+  }
+  if($_SESSION['login'])
+  {
+    header('location:home.php');
+  }
 ?>
 <!DOCTYPE html>
 <html>
@@ -13,16 +22,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link rel="stylesheet" type="text/css" href="style.css">
-
-  <script type = "text/javascript" >
-
-     function preventBack(){window.history.forward();}
-
-      setTimeout("preventBack()", 0);
-
-      window.onunload=function(){null};
-
-  </script>
 </head>
 
 <body>
