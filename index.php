@@ -36,14 +36,14 @@
         <div class="tab-content">
           <div id="login" class="tab-pane fade in active">
             <form action="login.php" method="post" style="margin-top:10px;">
-              <input type="text" class="input" placeholder="User ID" name="uid"/><br />
+              <input type="text" class="input" placeholder="User ID" name="uid" required /><br />
               <p class="msg">
                 <?php
                 if( isset($_SESSION['usernotfoundmsg']) AND !empty($_SESSION['usernotfoundmsg']) )
                   {  echo $_SESSION['usernotfoundmsg'];}
                 ?>
               </p>
-              <input type="password" class="input" placeholder="Password" name="password"/><br />
+              <input type="password" class="input" placeholder="Password" name="password" required/><br />
               <p class="msg">
                 <?php
                 if( isset($_SESSION['wrongpwmsg']) AND !empty($_SESSION['wrongpwmsg']) )
@@ -61,12 +61,12 @@
           </div>
           <div id="signup" class="tab-pane fade">
             <form action="register.php" method="post" style="margin-top:10px;" method="post" >
-              <input type="text" class="input" placeholder="Name" name="name"/><br />
-              <input type="text" class="input" placeholder="User ID" name="uid"/><br />
-              <input type="email" class="input" placeholder="Email Address" name="email"/><br />
-              <input type="password" class="input" placeholder="Password" name="password"/><br />
-              <input type="password" class="input" placeholder="Confirm Password" name="password2"/><br />
-              <input type="number" class="input" placeholder="Phone number" name="phone"/><br />
+              <input type="text" class="input" placeholder="Name" name="name" required/><br />
+              <input type="text" class="input" placeholder="User ID" name="uid" required/><br />
+              <input type="email" class="input" placeholder="Email Address" name="email" required/><br />
+              <input type="password" class="input" placeholder="Password" name="password" required/><br />
+              <input type="password" class="input" placeholder="Confirm Password" name="password2" required/><br />
+              <input type="number" class="input" placeholder="Phone number" name="phone" required/><br />
               <p class="msg">
                 <?php
                 if( isset($_SESSION['userexistsmsg']) AND !empty($_SESSION['userexistsmsg']) )

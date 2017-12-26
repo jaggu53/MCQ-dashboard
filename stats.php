@@ -68,7 +68,7 @@
               $result=$mysqli->query("SELECT `sub_name` FROM `subject` WHERE `sub_id`='$i'");
               $user=$result->fetch_assoc();
               $subname=$user['sub_name'];
-              $res=$mysqli->query("SELECT COUNT(`question`) AS `que` FROM `question` WHERE `sub` LIKE 'math'");
+              $res=$mysqli->query("SELECT COUNT(`question`) AS `que` FROM `question` WHERE `sub` LIKE '$subname'");
               $no=$res->fetch_assoc();
               echo
               "<tr>

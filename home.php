@@ -58,35 +58,29 @@ session_start();
         <div id="form1" class="collapse">
 
             <div class="tab-pane fade in active">
-              <form style="margin-top:10px;">
+              <form action="question.php" method="post" autocomplete="off" style="margin-top:10px;">
                 <div id="category">
                   <p class="text">Select&nbsp;category&nbsp;
 
-      		<select name="players" style="background-color:#333333">
-      			<option value="1" selected>1</option>
-      			<option value="2">2</option>
-      			<option value="3">3</option>
-      			<option value="4">4</option>
-      			<option value="5">5</option>
-      			<option value="6">6</option>
-      			<option value="7">7</option>
-      			<option value="8">8</option>
-      			<option value="9">9</option>
-      			<option value="10">10</option>
+      		<select name="category_home" style="background-color:#333333">
+      			<option value="A" selected>A</option>
+      			<option value="B">B</option>
+      			<option value="C">C</option>
+      			<option value="D">D</option>
       		</select></p>
         </div>
         <br />
-                <input type="text"  class="form-control" id="inputdefault" placeholder="Enter question"/><br />
+                <input type="text" name="qt"  class="form-control" id="inputdefault" placeholder="Enter question" required/><br />
                 <br />
-                <input type="text"  class="form-control" id="inputdefault" placeholder="Option 1"/><br />
-                <input type="text"  class="form-control" id="inputdefault" placeholder="Option 2"/><br />
-                <input type="text"  class="form-control" id="inputdefault" placeholder="Option 3"/><br />
-                <input type="text"  class="form-control" id="inputdefault" placeholder="Option 4"/><br />
+                <input type="text" name="opt1" class="form-control" id="inputdefault" placeholder="Option 1" required/><br />
+                <input type="text" name="opt2" class="form-control" id="inputdefault" required placeholder="Option 2"/><br />
+                <input type="text" name="opt3" required class="form-control" id="inputdefault" placeholder="Option 3"/><br />
+                <input type="text" name="opt4" required class="form-control" id="inputdefault" placeholder="Option 4"/><br />
 
                 <div id="category"><p class="text">
                   Correct&nbsp;option
 
-      		<select name="players" style="background-color:#333333">
+      		<select name="answer_home" style="background-color:#333333">
       			<option value="1" selected>1</option>
       			<option value="2">2</option>
       			<option value="3">3</option>
@@ -95,7 +89,7 @@ session_start();
         </div>
         <br />
 
-                <button type="button" class="btn btn-primary btn-block">Upload</button><br />
+                <button type="submit" name="man_upload" class="btn btn-primary btn-block">Upload</button><br />
               </form>
             </div>
           </div>
